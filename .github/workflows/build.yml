@@ -1,4 +1,4 @@
-名字: Build
+名字: Build APK
 
 在: [推,工作流_调度]
 
@@ -6,18 +6,30 @@
 建设:
 连续运行: Ubuntu-最新版
 步伐:
-    - 使用: 动作/签出@v4
-    - 使用: 操作/设置-python@v5
+      - 使用: 动作/签出@v4
+      
+      - 名字: 建立JDK
+使用: 操作/设置-java@v4
 随着:
-大蟒版本: '3.10'
-    - 名字: 安装Java 语言(一种计算机语言，尤用于创建网站)语言（一种计算机语言,尤用于创建网站)
-奔跑: sudo apt-get更新& & sudo apt-get install-y open JDK-17-JDK
-    - 名字: 安装buildozer
-奔跑: 点安装生成器
-    - 名字: 建设
-奔跑: buildozer android调试
-    - 名字: 上传APK
+java版本: '17'
+分布: 特穆林
+      
+      - 名字: 设置计算机编程语言
+使用: 操作/设置-python@v5
+随着:
+python版本: '3.10'
+      
+      - 名字: 安装依赖项
+奔跑: |
+pip安装生成器
+pip安装cython==0.29.33
+      
+      - 名字: 用Buildozer构建
+奔跑: |
+buildozer android调试
+      
+      - 名字: 上传APK
 使用: 动作/上传-工件@v4
 随着:
-名字: apk
-路径:bin/*。apk
+名字: 麻将-ai
+小路: bin/*。apk
