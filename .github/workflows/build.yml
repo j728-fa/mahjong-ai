@@ -1,18 +1,23 @@
-名字: Build APK
+名字: Build
 
-在: [推]
+在: [推,工作流_调度]
 
 工作:
 建设:
 连续运行: Ubuntu-最新版
 步伐:
-    - 使用: 动作/签出@v3
-    - 使用: 操作/设置-python@v4
+    - 使用: 动作/签出@v4
+    - 使用: 操作/设置-python@v5
 随着:
 大蟒版本: '3.10'
-    - 奔跑: 点安装生成器
-    - 奔跑: buildozer android调试
-    - 使用: 动作/上传-工件@v3
+    - 名字: 安装Java 语言(一种计算机语言，尤用于创建网站)语言（一种计算机语言,尤用于创建网站)
+奔跑: sudo apt-get更新& & sudo apt-get install-y open JDK-17-JDK
+    - 名字: 安装buildozer
+奔跑: 点安装生成器
+    - 名字: 建设
+奔跑: buildozer android调试
+    - 名字: 上传APK
+使用: 动作/上传-工件@v4
 随着:
-名字: 麻将-艾
-小路: bin/*。apk
+名字: apk
+路径:bin/*。apk
